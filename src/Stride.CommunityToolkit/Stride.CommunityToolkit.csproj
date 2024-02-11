@@ -2,6 +2,7 @@
     <PropertyGroup>
         <AssemblyName>Stride.CommunityToolkit</AssemblyName>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Nullable>disable</Nullable>
     </PropertyGroup>
 
     <Import Project="..\CommonSettings.props" />
@@ -32,5 +33,27 @@
         <PackageReference Include="Stride.Particles" Version="4.2.*" />
         <PackageReference Include="Stride.Physics" Version="4.2.*" />
         <PackageReference Include="Stride.UI" Version="4.2.*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Rendering\DebugShapes\Effects\LinePrimitiveShader.sdsl.cs">
+        <DesignTime>True</DesignTime>
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+      </Compile>
+      <Compile Update="Rendering\DebugShapes\Effects\PrimitiveShader.sdsl.cs">
+        <DesignTime>True</DesignTime>
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Rendering\DebugShapes\Effects\LinePrimitiveShader.sdsl">
+        <LastGenOutput>LinePrimitiveShader.sdsl.cs</LastGenOutput>
+      </None>
+      <None Update="Rendering\DebugShapes\Effects\PrimitiveShader.sdsl">
+        <LastGenOutput>PrimitiveShader.sdsl.cs</LastGenOutput>
+      </None>
     </ItemGroup>
 </Project>
